@@ -11,4 +11,13 @@ class UberX extends Car{
       $this->brand = $brand;
       $this->model = $model;
   }
+
+  public function setPassenger($passenger) {
+
+    if (passenger == 6) {
+      this.passenger = passenger;
+    } else {
+      System.out.println("debe tener 6 asientos");
+    }
+  }
 }

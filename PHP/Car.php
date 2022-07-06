@@ -1,14 +1,27 @@
 <?php
 
 class Car { 
-    public $id = integer;
-    public $licence = string;
+    public $id;
+    public $licence;
     public $driver;
-    public $passenger = string;
+    protected $passenger;
 
-    public function __constructor($license, $driver, $passenger) {
+    function __construct($license, $driver, $passenger) {
         $this->license = $license;
         $this->driver = $driver;
         $this->passenger = $passenger;
+    }
+
+    public function getPassenger() {
+        return $this->passenger;
+    }
+
+    public function setPassenger($passenger) {
+
+        if ($passenger == 4) {
+            $this->passenger = $passenger;
+        } else {
+            print 'Necesitas asignar 4 pasajeros'
+        }
     }
 }
